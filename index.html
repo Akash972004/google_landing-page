@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google</title>
-    <link rel="website icon" type="png" href="chrome.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="google.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav">
-        <div class="info">
-          <p>Gmail</p>
-          <p>Images</p>
-          <i class="fa-solid fa-flask"></i>
-          <i class="fa-solid fa-braille"></i>
-          <img src="profile.jpg" alt="email" height="30px" width="30px" />
-        </div>
-      </div>
-      <div class="logo">
-        <h1>Google</h1>
-      </div>
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass" id="glass"></i>
-        <input type="text" placeholder="Search Google or type a URL" />
-        <i class="fa-solid fa-microphone" id="mic"></i>
-      </div>
-      <div class="ext">
-        <a href="https://www.youtube.com/"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
-        <a href="#google account"><i class="fa-brands fa-google"></i></a>
-        <a href="#extensions"><i class="fa-solid fa-circle-plus"></i></a>
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Clone</title>
+  <link rel="icon" type="image/png" href="chrome.png" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+<body>
+  <header class="nav">
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#" aria-label="Gmail">Gmail</a></li>
+        <li><a href="#" aria-label="Google Images">Images</a></li>
+        <li><button aria-label="Google Experiments"><i class="fa-solid fa-flask"></i></button></li>
+        <li><button aria-label="Google Apps"><i class="fa-solid fa-braille"></i></button></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fa-solid fa-moon"></i>
+      </button></li>
+        <li><img src="profile.jpg" alt="Profile picture" class="profile-pic" /></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="logo">Google</h1>
+
+    <form class="search" role="search" aria-label="Google search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search Google or type a URL" aria-label="Search" />
+      <i class="fa-solid fa-microphone" aria-label="Search by voice"></i>
+    </form>
+
+    <!-- Dynamic Trending Section -->
+    <section class="info-section">
+      <h2>🔥 Trending Searches</h2>
+      <ul id="trending-list">
+        <li>Loading trending topics...</li>
+      </ul>
+    </section>
+
+    <section class="quick-links">
+      <a href="https://www.youtube.com/" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" title="Google"><i class="fa-brands fa-google"></i></a>
+      <a href="#" title="Extensions"><i class="fa-solid fa-circle-plus"></i></a>
+    </section>
+  </main>
+  <script src="theme.js"></script>
+  <script src="trending.js"></script>
+</body>
 </html>
